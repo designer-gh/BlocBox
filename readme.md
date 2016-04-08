@@ -1,3 +1,3 @@
 **Gather**
 
-Created by Gabby Chung
+Created by Gabby C.
