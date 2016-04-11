@@ -288,7 +288,7 @@ table {
    background: #00E676;
 }
 .rule {
-   width: 225px;
+   width: 100%;
    border-bottom: solid 1px;
    color: #ffffff;
 }
@@ -301,3 +301,39 @@ table {
 .questions h2 {
    color: #2196f3;
 }
+
+ /* FOOTER */
+ footer {
+   background-color: #2196f3;
+   color: #FFFFFF;
+   height: 75px;
+   position: relative;
+   overflow: hidden;
+   z-index: 0;
+   vertical-align: bottom;
+ }
+ footer p, footer nav ul {
+   font-size:14px;
+   font-weight:100;
+   text-align: center;
+   margin: 10px auto 0;
+ }
+ footer nav ul li {
+   list-style-type: none;
+   display: inline-block;
+   padding: 5px;
+ }
+ footer nav ul li a {
+   color:#FFFFFF;
+   text-decoration: none;
+ }
+
+ footer .copyright-block{
+   display: inline-block;
+ }
+@media (min-width: 992px){
+   footer{
+     background-color: #2196f3;
+     height: 75px;
+   }
+
