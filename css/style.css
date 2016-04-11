@@ -64,9 +64,14 @@
      width:21%;
    }
  }
- @media (min-width: 1200px) {
+ @media (min-width: 1200px) and (max-device-width: 1600px) {
    .container {
      width: 1170px;
+   }
+ }
+@media (min-width: 1600px) {
+   .container {
+     width: 1570px;
    }
  }
 
