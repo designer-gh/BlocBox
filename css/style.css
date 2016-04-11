@@ -1,16 +1,16 @@
  html, body{
    overflow-x: hidden;
  }
- header {
-   background-image: url('../images/hero-bg.png');
-   background-repeat: repeat-x;
- }
  body {
    font-family: "Pontano Sans", Helvetica, Arial, sans-serif;
    color:#333333;
  }
  h1, h2, h3, h4, h5, h6 {
    font-family: "Droid Serif", Georgia, serif;
+ }
+ h1{
+   font-size:32pt;
+   font-weight: normal;
  }
  h2 {
    font-size:28px;
@@ -45,6 +45,113 @@
    min-height: 1px;
    margin:0 2% 20px;
  }
- #object{
-   visibility: hidden;
+ @media (min-width: 768px) {
+   .container {
+     width: 750px;
+   }
  }
+ @media (min-width: 992px) {
+   .container {
+     width: 970px;
+   }
+   .one-half {
+     width:46%;
+   }
+   .one-third {
+     width:29.33333%;
+   }
+   .one-fourth {
+     width:21%;
+   }
+ }
+ @media (min-width: 1200px) {
+   .container {
+     width: 1170px;
+   }
+ }
+
+ /* HEADER */
+ header {
+   color:#FFFFFF;
+   background-image: url('../images/hero-bg.png');
+   background-repeat: repeat-x;
+ }
+ header nav {
+   padding:1em 0;
+
+ }
+ header nav ul {
+   display:inline;
+   text-align: right;
+   float:right;
+   margin:0;
+ }
+ header nav ul > li {
+   list-style-type: none;
+   display: inline-block;
+   margin:0 15px;
+ }
+ header nav ul > li.btn-outline {
+   padding:10px 15px;
+   border:2px solid #FFFFFF;
+   border-radius: 4px;
+ }
+ header nav ul > li.btn-outline:hover {
+   background:#FFFFFF;
+ }
+ header nav ul > li > a {
+   color:#FFFFFF;
+   text-decoration: none;
+ }
+ header nav ul > li.btn-outline:hover > a {
+   color:#34495E;
+ }
+
+ header .hero {
+   text-align: left;
+   display:block;
+   position: relative;
+ }
+ header .hero h1 {
+   font-size:48px;
+   font-weight: normal;
+
+ }
+ header .hero p {
+   font-size: 22px;
+   line-height: 26px;
+   font-weight: 100;
+   margin:10px 0 40px;
+ }
+
+ .hero-description-container {
+   display: inline-block;
+   vertical-align: top;
+ }
+
+
+ /* BUTTONS */
+ .btn {
+   border-radius: 4px;
+   color:#FFFFFF;
+   font-weight: 700;
+   display: inline-block;
+   text-decoration: none;
+   padding:10px 40px;
+   background: #00E676;
+   border: 2px solid #00E676;
+   box-shadow: 0px 2px 0px 0px #22894E;
+ }
+ .demo-btn {
+   margin-top: 7px;
+ }
+ .demo {
+   color:E4F1FB;
+   font-weight: 700;
+   text-decoration: none;
+   padding:30px 10px;
+   border: none;
+ }
+.demo-text {
+   vertical-align: center;
+}
