@@ -49,7 +49,7 @@
    min-height: 1px;
    margin:0 2% 20px;
  }
- @media only screen and (min-width: 320px) and (max-width: 480px) {
+ @media only screen and (min-width: 240px) and (max-width: 480px) {
    .container {
      width: 470px;
    }
@@ -68,10 +68,34 @@
       float:none;
       padding:30px;
    }
-   .footer {
-      display: inline;
-      height: 200px;
-   }
+   footer {
+   background-color: #2196f3;
+   color: #FFFFFF;
+   height: 250px;
+   position: relative;
+   z-index: 0;
+   vertical-align: center;
+ }
+   footer nav ul {
+   font-size:14px;
+   font-weight:100;
+   text-align: center;
+   margin: 10px auto 0;
+   vertical-align: center;
+   margin-top:13px;
+ }
+ footer nav ul li {
+   list-style-type: none;
+   padding: 5px;
+   vertical-align: center;
+ }
+footer nav ul li a {
+   color:#FFFFFF;
+   text-decoration: none;
+ }
+footer .copyright-block{
+   display: inline-block;
+ }
 }   
 
  @media (min-width: 768px) and (max-device-width: 991px) {
@@ -168,7 +192,9 @@
    vertical-align: top;
    margin:0 2% 0px;
  }
-
+.signup {
+   display: inline-block;
+}
 
  /* BUTTONS */
  .btn {
@@ -335,7 +361,6 @@ table {
    color: #FFFFFF;
    height: 75px;
    position: relative;
-   overflow: hidden;
    z-index: 0;
    vertical-align: center;
  }
@@ -372,31 +397,93 @@ table {
  }
 
  footer .copyright-block{
-   display: inline-block;
+   display: block;
    vertical-align: center;
+   background-color: #2196f3
  }
  footer .footer-nav-block{
    vertical-align: center;
+   background-color: #2196f3;
  }
+
+
 @media (min-width: 992px){
    footer{
      background-color: #2196f3;
      height: 75px;
    }
+}
 
 /* DASHBOARD */
  .dashboard {
    background:#f7fafb;
  }
+
  .left-nav {
-   height: 100vh;
-   width:14.66666667%;
-   color:#FFFFFF;
-   background: #e4f1fb;
-   float:left;
-   position: fixed;
-   display:block;
+   height: 100%;
+   width:280px;
+   position: absolute;
+     -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+     -o-transition: all 0.3s ease-in-out;
+     transition: all 0.3s ease-in-out;
+     transform: translate(-280px,0);
+     -webkit-transform: translate(-280px,0); /** Chrome & Safari **/
+     -o-transform: translate(-280px,0); /** Opera **/
+     -moz-transform: translate(-280px,0); /** Firefox **/
  }
+.left-nav.open {
+   display:block;
+   width:280px;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+     z-index: 100;
+ }
+ .hamburger {
+   position:absolute;
+   z-index: 1000;
+   background:#90caf9;
+   color:#FFF;
+   text-decoration: none;
+   font-size: 22px;
+   padding: 10px 15px;
+   border-radius: 4px;
+   left: 5px;
+   top: 15px;
+ }
+
+ @media (min-width:992px) {
+   .left-nav {
+     height: 100vh;
+     width:14.66666667%;
+     color:#FFFFFF;
+     background: #e4f1fb;
+     float:left;
+     position: fixed;
+     display:block;
+     transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+   }
+   .left-nav.open {
+     width:14.66666667%;
+     transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+   }
+   .hamburger {
+     display:none;
+   }
+}
+
  .left-nav .site-logo {
    padding:20px 0;
    background:#2196f3;
@@ -550,7 +637,7 @@ table {
  }
 
  /* Larger Mobile Devices */
- @media (min-width:460px) {
+ @media (min-width:460px) and (max-width: 767px) {
    .content {
      padding:1.5em 1%;
      float:right;
@@ -565,7 +652,7 @@ table {
    }
  }
 /* Tablets */
- @media (min-width:768px) {
+ @media (min-width:768px) and (max-width: 991px) {
    .content {
      padding:1.5em 5%;
      float:right;
@@ -573,7 +660,7 @@ table {
      position: relative;
    }
    .content > .container {
-     width:700px;
+     width:90%;
    }
    .content-item {
      width:31.33333%;
