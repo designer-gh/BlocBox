@@ -186,7 +186,7 @@
    margin-top: 7px;
  }
  .demo {
-   color:E4F1FB;
+   color:#E4F1FB;
    font-weight: 700;
    text-decoration: none;
    padding: 30px 10px;
@@ -430,6 +430,15 @@ table {
    width:16px;
    text-align: center;
    margin-right:8px;
+ }
+.left-nav .items .active {
+   background: #2196f3;
+   text-decoration: none;
+   font-weight: 100;
+   padding:2px;
+ }
+ .left-nav .items .active .active-whitetext{
+   color: #ffffff;
  }
 
   /* LEFT NAVBAR SETTINGS */
