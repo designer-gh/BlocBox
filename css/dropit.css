@@ -10,8 +10,8 @@
 /* These styles assume you are using ul and li */
 .dropit {
     list-style: none;
-	padding: 0;
-	margin: 15px 0 0;
+	  padding: 0;
+	  margin: 15px 0 0;
     float: right;
     display: inline-block;
 }
@@ -58,3 +58,30 @@
   font-family: "Pontano Sans", Helvetica, Arial, sans-serif;
   font-weight:100;
  }
+ /* Triangle Inverted */
+ .dropit-inverse.dropit .dropit-open .dropit-submenu:after {
+  content: " ";
+  position: absolute;
+  border-style: solid;
+  border-width: 0 8px 8px;
+  border-color: #FFFFFF transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  top: 100%;
+  right: 8px;
+  transform: rotate(180deg);
+}
+.dropit-inverse .dropit-trigger { position: relative; }
+.dropit-inverse .dropit-submenu {
+    position: absolute;
+    top: -160px;
+    right: 0; /* dropdown left or right */
+    z-index: 1000;
+    display: none;
+    min-width: 145px;
+    list-style: none;
+  padding: 20px;
+  margin: 20px 0 0;
+}
+ 
